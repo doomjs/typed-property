@@ -1,0 +1,50 @@
+{
+  "name": "typed-property",
+  "version": "1.0.0",
+  "description": "Strongly typed property definer",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "rimraf lib && tsc -p tsconfig.es5.json",
+    "test": "nyc mocha src/**/*.spec.ts",
+    "prepare": "npm test && npm run build"
+  },
+  "nyc": {
+    "include": [
+      "src/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.spec.ts",
+      "**/*.d.ts",
+      "**/index.ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "author": "IDDQD",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
+    "@types/node": "^8.0.28",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
+    "nyc": "^11.2.1",
+    "rimraf": "^2.6.2",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.2"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.10"
+  }
+}

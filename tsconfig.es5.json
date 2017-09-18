@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "outDir": "lib",
+        "lib": [
+            "es2015"
+        ],
+        "experimentalDecorators": true,
+        "noImplicitAny": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "pretty": true,
+        "sourceMap": true,
+        "declaration": true
+    },
+    "exclude": [
+        "**/*.spec.ts"
+    ]
+}
